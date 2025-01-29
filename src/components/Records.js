@@ -13,7 +13,7 @@ export default function Records(props) {
         })
             .then(response => {
                 console.log("response is going to be JSON'd idk")
-                response.json()
+                return response.json()
             })
             .then(data => {
                 console.log("Updating state with the data...")
