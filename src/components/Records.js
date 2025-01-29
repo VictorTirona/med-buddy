@@ -11,7 +11,9 @@ export default function Records(props) {
                 'Content-Type': 'application/json'
             }
         })
+            .then(response => response.json())
             .then(data => {
+                console.log("Updating state with the data...")
                 console.log(data)
                 setRecords(data)
             })
