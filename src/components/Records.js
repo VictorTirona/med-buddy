@@ -5,7 +5,7 @@ export default function Records(props) {
     const [records, setRecords] = React.useState([])
     React.useEffect(() => {
         console.log("loading data for the first time")
-        fetch(`${BACKEND_URL}/api/v1/records`, {
+        fetch(`${process.env.BACKEND_URL}/api/v1/records`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
