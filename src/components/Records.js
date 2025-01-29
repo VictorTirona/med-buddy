@@ -11,7 +11,10 @@ export default function Records(props) {
                 'Content-Type': 'application/json'
             }
         })
-            .then(response => response.json())
+            .then(response => {
+                console.log("response is going to be JSON'd idk")
+                response.json()
+            })
             .then(data => {
                 console.log("Updating state with the data...")
                 console.log(data)
