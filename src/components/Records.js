@@ -5,7 +5,7 @@ export default function Records(props) {
     const [records, setRecords] = React.useState([])
     React.useEffect(() => {
         console.log("loading data for the first time")
-        fetch('/api/v1/records', {
+        fetch('https://med-buddy-server.vercel.app/api/v1/records', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
