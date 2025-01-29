@@ -2,9 +2,9 @@ const express = require('express')
 const { Pool } = require('pg')
 const app = express();
 const PORT = 5000;
+require('dotenv').config();
 
 app.use(express.json());
-
 /*
 QUERIES FOR SETUP:
 
@@ -23,11 +23,12 @@ VALUES ('[{ "value": "fever", "label": "Fever" }, { "value": "greenphlegm", "lab
 
 */
 
+
 const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
     database: 'tor_projects',
-    password: process.env.POSTGRES_KEY,
+    password: `${process.env.POSTGRES_KEY}`,
     port: 5432,
 })
 

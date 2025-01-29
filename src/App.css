@@ -1,0 +1,383 @@
+/*This webkit code makes sure inputs don't go beyond the container*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  font-family: 'Inter', sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.App--left {
+  width: 40%;
+  height: 100%;
+  position: fixed;
+}
+
+
+.App--right {
+  width: 60%;
+  position: relative;
+  left: 40%;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  padding: 23px 0 0 0;
+  background-color: #283B98;
+  width: 100%;
+  height: 65px;
+}
+
+.Header--logo {
+  height: 38px;
+  margin: 0 0 0 20px;
+}
+
+.Header--text {
+  margin: 0 0 0 12px;
+  color: white;
+}
+
+.Form {
+  width: 100%;
+  height: 100%;
+  background-color: #283B98;
+}
+
+.Form--container {
+  width: auto;
+  padding: 31px 20px 0 20px;
+}
+
+.Form--label {
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 9px;
+  color: white;
+}
+
+.Form--line {
+  margin-bottom: 20px;
+}
+
+.react-select__indicators {
+  cursor: pointer;
+}
+
+.Form--dates-container {
+  display: flex;
+}
+
+.Form--startdate {
+  margin-right: auto;
+}
+
+.Form--date-spacer {
+  width: 16px;
+}
+
+.Form--date {
+  width: 50%;
+}
+
+.Form--date-input {
+  width: 100%;
+  height: 44px;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  padding: 0 10px 0 10px;
+  cursor: pointer;
+}
+
+.Form--othernotes-input {
+  width: 100%;
+  padding: 12px 10px 0 10px;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  resize: vertical;
+}
+
+.Form--optional {
+  font-style: italic;
+  color: #1f307c;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.Form--submitbtn {
+  float: right;
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: italic;
+  width: 115px;
+  height: 45px;
+  background-color: #172157;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.Form--submitbtn:hover {
+  background-color: #10183d;
+  color: white;
+}
+
+.Form--submitbtn:active {
+  background-color: #060918;
+}
+
+.Alert {
+  border-radius: 10px;
+  height: auto;
+  margin: 0 0 20px 0;
+  padding: 20px 10px 20px 10px;
+}
+
+.Alert--container {
+  display: flex;
+  align-items: center;
+}
+
+.Alert--logo {
+  margin: 0 0 0 0;
+  height: 20px;
+}
+
+.Alert--title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 0 0 10px;
+}
+
+.Alert--bullets {
+  margin: 10px 0 0 8px;
+}
+
+.Alert--bullets li {
+  margin: 5px 0 0 0;
+}
+
+
+
+
+.Login {
+  padding: 23px 0 0 0;
+  width: 100%;
+  height: 65px;
+}
+
+.Login--btn {
+  float: right;
+  height: 40px;
+  width: 139px;
+  margin: 0 20px 0 0;
+  background-color: #283B98;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.Records {
+  padding: 25px 0 152px 40px;
+}
+
+.Records--title {
+  font-size: 1rem;
+}
+
+.Experiences {
+  padding: 110px 0 0 0;
+}
+
+.ExpCard--container {
+  display: flex;
+  margin: 0 75px 35px 0;
+}
+
+.ExpCard--subcontent {
+  width: 145px;
+  height: 75px;
+  margin: 4px 0 0 0;
+}
+
+.ExpCard--date {
+  font-size: 0.75rem;
+  letter-spacing: 0.02rem;
+  color: #64748b;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ExpCard--image-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 2px solid rgb(0, 0, 0, 0);
+}
+
+.ExpCard--image {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.ExpCard--content {
+  width: 850px;
+  margin: 0 0 0 42px;
+  line-height: 1.3rem;
+}
+
+.ExpCard--title {
+  font-size: 1rem;
+  color: #283B98;
+  font-weight: bold;
+  margin: 0 0 0 0;
+}
+
+.ExpCard--title-bullet {
+  font-size: 0.5rem;
+  vertical-align: middle;
+}
+
+.ExpCard--title:hover {
+  color: rgb(15, 42, 177);
+}
+
+.ExpCard--subtitle {
+  font-size: 0.875rem;
+  color: #898989;
+  font-weight: 400;
+  margin: 0 0 0 0;
+}
+
+.ExpCard--description {
+  font-size: 0.875rem;
+  color: #000000;
+  font-weight: 400;
+  margin: 7px 0 7px 0;
+}
+
+.ExpCard--attachedlinks {
+  margin: 14px 0 14px 0;
+}
+
+.ExpCard--perlink {
+  font-size: 0.875rem;
+  margin: 0 15px 0 0;
+
+  z-index: 2;
+}
+
+.ExpCard--perlink:link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.ExpCard--perlink:visited {
+  color: #000000;
+}
+
+.ExpCard--perlink:hover {
+  color: rgb(15, 42, 177);
+}
+
+.ExpCard--skills {
+  margin: 7px 0 0 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.ExpCard--perskill {
+  font-size: 0.75rem;
+  font-weight: 400;
+  background-color: #283B98;
+  color: #ffffff;
+  width: auto;
+  border-radius: 8px;
+  padding: 3px 15px 3px 15px;
+  margin: 0 8px 0 0;
+}
+
+/*Code for Experience Card highlight when hovering*/
+
+.ExpCard {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.ExpCard--highlight {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 5px;
+  top: -25px;
+  left: -25px;
+  width: calc(100% + 50px);
+  height: calc(100% + 50px);
+  border-top: 1px solid rgb(255, 255, 255, 0.075);
+  box-shadow: 0 4px 4px -2px rgb(0, 0, 0, 0.2);
+  /*pointer-events: none; This solves the Tech Debt of mouse over links not working*/
+}
+
+.ExpCard:hover {
+  cursor: pointer;
+}
+
+.Metrics {
+  display: flex;
+  align-items: center;
+  width: auto;
+  margin: 60px 55px 0 40px;
+  /*used to be 32px top but changed so it would align with the first input instead of the title*/
+}
+
+.Metric {
+  border-radius: 10px;
+  background-color: #D9D9D9;
+  padding: 15px 20px 15px 20px;
+  width: 100%;
+  margin: 0 20px 0 0
+}
+
+.Metric--title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #283B98;
+  text-align: center;
+  margin: 0;
+}
+
+.Metric--subtitle {
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 17px 0 0 0;
+}
