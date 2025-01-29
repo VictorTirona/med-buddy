@@ -46,7 +46,12 @@ TO DO:
         ✔ In handle submit, if ERROR state is true, don't fetch and show error message. If false, fetch and show success message "Added records"
 ✔ Light testing
     ✔ What happens when all that can be optional IS optional?
-9. Deploy
+✔ Deploy
+    ✔ Deploy frontend
+    ✔ Deploy backend
+    ✔ Deploy database
+10. Create guest mode and adjust on database
+11. Adjust all the fetch requests to use the Supabase methods
 
 ----END OF MVP----
 8. Fix the date input
