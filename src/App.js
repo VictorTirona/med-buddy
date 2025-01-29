@@ -26,7 +26,9 @@ function App() {
       </div>
       <div className="App--right">
         <Login />
-        
+        <Metrics 
+          submissionStatus={submissionStatus}
+        />
         <Records
           submissionStatus={submissionStatus}
         />
