@@ -174,7 +174,7 @@ export default function Form(props) {
         const start_date = new Date(formData.start_date)
         const end_date = new Date(formData.end_date)
         if (selectedSymptoms !== "" && formData.start_date !== "" && (end_date > start_date || formData.end_date == "")) {
-            fetch("/api/v1/records", {
+            fetch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/records`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'

@@ -26,7 +26,7 @@ export default function Metrics(props) {
     React.useEffect(() => {
         console.log("Loading metrics data...")
         
-        fetch(`/api/v1/records/metrics/${currentYear}`, {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/records/metrics/${currentYear}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
