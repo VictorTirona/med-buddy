@@ -4,9 +4,9 @@ import ExperienceCard from './ExpCard/ExperienceCard.js'
 export default function Records(props) {
     const [records, setRecords] = React.useState([])
     React.useEffect(() => {
-        console.log("Here's the backend URL ENV VAR:", process.env.BACKEND_URL)
+        console.log("Here's the backend URL ENV VAR:", process.env.REACT_APP_BACKEND_URL)
         console.log("loading data for the first time")
-        fetch('https://med-buddy-server.vercel.app/api/v1/records', {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/records`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
