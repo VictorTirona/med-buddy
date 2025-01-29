@@ -27,7 +27,7 @@ const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
     database: 'tor_projects',
-    password: 'Terraria07!',
+    password: process.env.POSTGRES_KEY,
     port: 5432,
 })
 
