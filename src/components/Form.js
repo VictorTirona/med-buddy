@@ -54,18 +54,19 @@ TO DO:
 ✔ Update title and icons
 ✔ Investigate bug. Why are the errors not showing up properly? Symptoms, start date, start and end date.
 ✔ Improvement. Maybe add the date sa JAN 2025
-16. Improvement. Increase all text (1.25x)
 ✔. Create guest mode and adjust on database
     - Add a warning:
         - Data resets every day. Data included today will be removed!
         - proof of content warning. Do not include sensitive information!
     - Change login button to "Guest mode only" and add an icon of a guest
+16. Improvement. Increase all text (1.25x)
 14. After all the fetch requests have been done, figure out how to run this locally as well. 
     - Technically dapat pwede bc the database just changed. Everything else should stil be the same.
 
 18. For the future: What if interviewers load this on their mobile phones?
     - Maybe for now, if mobile or ipad, there should be an alert that tells them to use their laptops.
     - https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
+19. BUG: Select symptom, then unselect, then submit. You can submit without a symptom
 
 ----END OF MVP----
 8. Fix the date input
@@ -192,7 +193,7 @@ export default function Form(props) {
         event.preventDefault();
         const start_date = new Date(formData.start_date)
         const end_date = new Date(formData.end_date)
-        if (selectedSymptoms !== "" && formData.start_date !== "" && (end_date > start_date || formData.end_date == "")) {
+        if (selectedSymptoms !== "" && errorData.symptoms == "" && formData.start_date !== "" && (end_date > start_date || formData.end_date == "")) {
             fetch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/records`, {
                 method: "POST",
                 headers: {
