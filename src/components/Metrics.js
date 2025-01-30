@@ -40,13 +40,13 @@ export default function Metrics(props) {
                         console.log("illness")
                         return{
                             ...perMetric,
-                            title: data.count_illness
+                            title: data[0].count_illness
                         }
                     } else if (perMetric.subtitle===`Days of sickness in ${currentYear}`){ //Very weak code. Can break the whole system <3
                         console.log("days sick")
                         return{
                             ...perMetric,
-                            title: data.days_sick
+                            title: data[0].days_sick
                         }
                     }
                 }))

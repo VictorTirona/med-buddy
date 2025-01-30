@@ -50,8 +50,17 @@ TO DO:
     ✔ Deploy frontend
     ✔ Deploy backend
     ✔ Deploy database
-10. Create guest mode and adjust on database
-11. Adjust all the fetch requests to use the Supabase methods
+13. Adjust all the fetch requests to use the Supabase methods
+    
+14. After all the fetch requests have been done, figure out how to run this locally as well. 
+    - Technically dapat pwede bc the database just changed. Everything else should stil be the same.
+15. Investigate bug. Why are the errors not showing up properly? Symptoms, start date, start and end date.
+16. Improvement. Maybe add the date sa JAN 2025
+17. Create guest mode and adjust on database
+    - Data should reset per refresh?
+18. For the future: What if interviewers load this on their mobile phones?
+    - Maybe for now, if mobile or ipad, there should be an alert that tells them to use their laptops.
+    - https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
 
 ----END OF MVP----
 8. Fix the date input
