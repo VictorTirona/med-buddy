@@ -51,8 +51,10 @@ TO DO:
     ✔ Deploy backend
     ✔ Deploy database
 ✔ Adjust all the fetch requests to use the Supabase methods
+✔ Update title and icons
 15. Investigate bug. Why are the errors not showing up properly? Symptoms, start date, start and end date.
-15. Improvement. Maybe add the date sa JAN 2025
+✔ Improvement. Maybe add the date sa JAN 2025
+16. Improvement. Increase all text (1.25x)
 ✔. Create guest mode and adjust on database
     - Add a warning:
         - Data resets every day. Data included today will be removed!
@@ -280,6 +282,7 @@ export default function Form(props) {
     return (
         <form className="Form" onSubmit={handleSubmit}>
             <div className="Form--container">
+
                 {successStatus && <Alert
                     type="success"
                     title="Record has been logged!"

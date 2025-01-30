@@ -5,8 +5,8 @@ export default function Alert(props) {
     const alertStyle = {
         background: { backgroundColor: props.type === "error" ? "#ffc5c4" : "#B0F5CC",
             border: props.type === "error"? "1px solid #8b2821":"1px solid #22944c",
-            paddingTop: "10px",
-            paddingBottom: "5px",
+            paddingTop: props.type === "error" ? "10px" : "5px",
+            paddingBottom: props.type === "error" ? "10px" : "5px",
         },
         imgColor: {
             filter: props.type === "error"
@@ -32,7 +32,7 @@ export default function Alert(props) {
                 <img src={`./images/${alertIcon}`} style={alertStyle.imgColor} className="Alert--logo" />
                 <h2 className="Alert--title" style={alertStyle.contentsColor}>{props.title}</h2>
             </div>
-            {(Object.values(props.bullets).length == 0) && <ul className="Alert--bullets" style={alertStyle.contentsColor}>
+            {(Object.values(props.bullets).length !== 0) && <ul className="Alert--bullets" style={alertStyle.contentsColor}>
                 {alertsMapped}
             </ul>}
         </div>
