@@ -1,12 +1,14 @@
 import React from 'react'
 import ExperienceCard from './ExpCard/ExperienceCard.js'
+import experienceData from '../data/experienceData.js'
 
 export default function Records(props) {
     const [records, setRecords] = React.useState([])
     React.useEffect(() => {
         console.log("Here's the backend URL ENV VAR:", process.env.REACT_APP_BACKEND_URL)
         console.log("loading data for the first time")
-        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/records`, {
+        setRecords(experienceData)
+        /*fetch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/records`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -20,7 +22,7 @@ export default function Records(props) {
                 console.log("Updating state with the data...")
                 console.log(data)
                 setRecords(data)
-            })
+            })*/
     }, [props.submissionStatus])
     
 

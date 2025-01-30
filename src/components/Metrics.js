@@ -1,5 +1,6 @@
 import React from 'react'
 import Metric from './Metric/Metric.js'
+import metricData from '../data/metrics.js'
 
 export default function Metrics(props) {
     const currentYear = new Date().getFullYear();
@@ -14,19 +15,12 @@ export default function Metrics(props) {
         }
     ])
 
-    const metricDataMapped = metricsData.map((perMetric) => {
-        return (
-            <Metric
-                title={perMetric.title}
-                subtitle={perMetric.subtitle}
-            />
-        )
-    })
+
 
     React.useEffect(() => {
         console.log("Loading metrics data...")
-        
-        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/records/metrics/${currentYear}`, {
+        setMetricsData(metricData)
+        /*fetch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/records/metrics/${currentYear}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -50,11 +44,19 @@ export default function Metrics(props) {
                         }
                     }
                 }))
-            })
+            })*/
 
         
     }, [props.submissionStatus])
 
+    const metricDataMapped = metricsData.map((perMetric) => {
+        return (
+            <Metric
+                title={perMetric.title}
+                subtitle={perMetric.subtitle}
+            />
+        )
+    })
 
     return (
         <div className="Metrics">
