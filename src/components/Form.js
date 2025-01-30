@@ -52,7 +52,7 @@ TO DO:
     ✔ Deploy database
 ✔ Adjust all the fetch requests to use the Supabase methods
 ✔ Update title and icons
-15. Investigate bug. Why are the errors not showing up properly? Symptoms, start date, start and end date.
+✔ Investigate bug. Why are the errors not showing up properly? Symptoms, start date, start and end date.
 ✔ Improvement. Maybe add the date sa JAN 2025
 16. Improvement. Increase all text (1.25x)
 ✔. Create guest mode and adjust on database

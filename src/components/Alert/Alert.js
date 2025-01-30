@@ -5,8 +5,8 @@ export default function Alert(props) {
     const alertStyle = {
         background: { backgroundColor: props.type === "error" ? "#ffc5c4" : "#B0F5CC",
             border: props.type === "error"? "1px solid #8b2821":"1px solid #22944c",
-            paddingTop: props.type === "error" ? "10px" : "5px",
-            paddingBottom: props.type === "error" ? "10px" : "5px",
+            paddingTop: "10px",
+            paddingBottom: "10px",
         },
         imgColor: {
             filter: props.type === "error"
